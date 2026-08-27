@@ -1,0 +1,21 @@
+{
+  "trade_date": "2026-08-27",
+  "source_note": "Fallback audit record created because Neon run_sql connector returned a projectId/project_id schema validation mismatch during close review. PREMARKET and OPEN values below are the frozen values from the day's saved run context; CLOSE prices are Alpaca IEX regular-session data.",
+  "market_regime_premarket": "TECH-LED RISK-ON / AI INFRA REPRICING / MACRO EVENT RISK",
+  "open_states": {
+    "NVDA": {"direction":"LONG","state":"INVALID","decision_price":222.70,"opening_vwap":223.84,"tod_rvol":3.50},
+    "CRM": {"direction":"LONG","state":"ALIGNED","decision_price":242.64,"opening_vwap":238.13,"tod_rvol":8.81},
+    "CRWD": {"direction":"LONG","state":"ALIGNED","decision_price":218.06,"opening_vwap":215.00,"tod_rvol":5.70},
+    "DG": {"direction":"LONG","state":"READY","decision_price":129.29,"opening_vwap":128.09,"tod_rvol":5.22,"trigger":130.45,"stop":128.70,"target_1":133.08,"target_2":134.83,"horizon_minutes":120,"live_permission":false},
+    "BBY": {"direction":"SHORT","state":"INVALID","decision_price":83.40,"opening_vwap":80.60,"tod_rvol":3.94}
+  },
+  "close_outcomes": {
+    "NVDA": {"day_high":230.47,"day_low":220.96,"close":228.17,"session_vwap":226.20711,"post_open_mfe_pct":3.4890,"post_open_mae_pct":-0.0494,"thesis":"09:50 invalidation was transient; later re-acceptance strongly validated the underlying long information thesis","error_layer":"price_acceptance_state_lacked_reactivation"},
+    "CRM": {"day_high":254.36,"day_low":231.555,"close":252.19,"session_vwap":246.918295,"post_open_mfe_pct":4.8302,"post_open_mae_pct":-0.5110,"thesis":"long alpha strongly validated; no trade because overextension filter","error_layer":"possible_entry_geometry_false_negative"},
+    "CRWD": {"day_high":229.01,"day_low":206.41,"close":227.99,"session_vwap":222.080386,"post_open_mfe_pct":5.0216,"post_open_mae_pct":0.0,"thesis":"long alpha strongly validated; no trade because overextension/same-factor filter","error_layer":"possible_entry_geometry_false_negative"},
+    "DG": {"day_high":132.32,"day_low":124.76,"close":125.92,"session_vwap":128.323087,"triggered":true,"trigger_time_et":"10:01","trigger_price":130.45,"stop":128.70,"target_1":133.08,"target_2":134.83,"target_first":false,"stop_first":false,"exit_type":"TIME_EXIT","time_exit_et":"12:01","time_exit_price":129.60,"mfe_r":1.0686,"mae_r":-0.9229,"result_r":-0.4857,"thesis":"fundamental and initial price-acceptance thesis was valid, but continuation/persistence failed inside the frozen horizon","error_layer":"price_persistence_trigger_quality","live_permission":false},
+    "BBY": {"day_high":84.60,"day_low":76.98,"close":83.595,"session_vwap":83.129054,"post_open_mfe_pct":1.2050,"post_open_mae_pct":-1.4388,"thesis":"09:50 short invalidation broadly validated; no sustained downside acceptance","error_layer":"none_filter_worked"}
+  },
+  "oos_after_dg": {"n":6,"wins":3,"losses":3,"win_rate":0.5,"total_r":1.0409857,"avg_r":0.1734976},
+  "neon_write_status": "PENDING_CONNECTOR_FIX"
+}
